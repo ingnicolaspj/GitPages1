@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300;500;700&display=swap');
+
+body{
+     font-family: 'Josefin Sans', sans-serif;
+}
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --grey: hsl(0, 0%, 55%);
+    --gray: hsl(0, 0%, 55%);
+    --dark-grey: hsl(0, 0%, 41%);
+    --dark-gray: hsl(0, 0%, 41%);
+    --nav-link-bb: 2px;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 50px 0;
+    max-width: 1200px;
+}
+
+.subtitle{
+    color:var(--black);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+/* ---------------Estilos del ladingpages------------- */
+.hero{
+    /* Que ocupe el 100% del alto del viewport */
+    height: 100vh;
+    background-image: url(../assets/walppaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* fingir el efecto parallax */
+    background-attachment: fixed;
+    background-position: center;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+}
+
+.nav{
+    display: grid;
+    padding-bottom: 80px;
+    grid-template-columns: max-content max-content;
+    gap:20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav--footer{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav__items{
+    color: var(--white);
+    text-decoration: none;
+    margin-right: 10px;
+    padding: 10px 10px;
+}
+
+.nav__items:hover{
+    border-bottom: var(--nav-link-bb) solid;
+    border-image: linear-gradient(90deg, transparent, transparent 25%, white 25%, white 75%, transparent 75%, transparent) 1;
+}
+
+
+.nav_title-link{
+    text-decoration: none;
+    color:var(--white);
+    font-family: 'Alata', sans-serif;
+}
+
+.hero__main{
+    display: flex;
+    padding: 40px 10px;
+    height: calc(100vh - 200px);
+    align-items: center;
+    color: var(--white);
+    width: 70%;
+    height: 80%;
+    border: 2px solid var(--white);
+}
+
+.hero__text-copy{
+    font-size: 4rem;
+    font-weight: 300;
+}
+/* -----------Estilos del main----------- */
+
+@media only screen and (max-width:600px){
+    .nav{
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+}
+
+
+@media only screen and (max-width:400px){
+    .nav{
+        overflow: hidden;
+        display: flex;
+    }
+    
+}
